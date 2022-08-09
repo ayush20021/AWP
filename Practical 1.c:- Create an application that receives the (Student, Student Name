@@ -1,0 +1,45 @@
+using System;
+
+
+namespace Product
+{
+    public struct stud
+    {
+        public int id;
+        public string name, course, dob;
+    }
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+
+            stud[] s = new stud[3];
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Enter student id ");
+                s[i].id = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter student name");
+                s[i].name = Console.ReadLine();
+                Console.WriteLine("enter student couse");
+                s[i].course = Console.ReadLine();
+                Console.WriteLine("enter student DOB");
+                s[i].dob = Console.ReadLine();
+
+
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Id = " + s[i].id);
+                Console.WriteLine("Name = " + s[i].name);
+                Console.WriteLine("Couse = " + s[i].course);
+                Console.WriteLine("DOB = " + s[i].dob);
+            }
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
