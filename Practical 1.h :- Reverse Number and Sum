@@ -1,0 +1,31 @@
+using System;
+
+
+namespace Product
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int no, r, rev, sum;
+            Console.WriteLine("Enter any no: ");
+            no = int.Parse(Console.ReadLine());
+            rev = 0;
+            sum = 0;
+            while (no != 0)
+            {
+                r = no % 10;
+                rev = (rev * 10) + r;
+                sum = sum + r;
+                no = no / 10;
+            }
+            Console.WriteLine("\n Reverse=" + rev);
+            Console.WriteLine("\n Sum=" + sum);
+            Console.ReadKey();
+
+
+
+        }
+    }
+}
