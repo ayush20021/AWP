@@ -1,0 +1,84 @@
+using System;
+
+
+namespace Product
+{
+    class Program
+    {
+		static void Main(string[] args)
+		{
+			String s1 = "hello";
+			Console.WriteLine("s1" + s1);
+			Console.WriteLine();
+			Console.WriteLine("Enter a string ");
+			String s2 = Console.ReadLine();
+			Console.WriteLine();
+			String s3 = String.Copy(s1);
+			Console.WriteLine("Copied string s3 " + s3);
+			Console.WriteLine();
+			String s4 = String.Concat(s1, s2);
+			Console.WriteLine("Concatinate = " + s4);
+			Console.WriteLine();
+			int number = 789;
+			String s5 = number.ToString();
+			Console.WriteLine("int to string" + s5);
+			Console.WriteLine();
+			String s6 = "lean";
+			Console.WriteLine("Original string " + s6);
+			String s7 = s6.Insert(3, "r");
+			Console.WriteLine("Insertion s7" + s7);
+			Console.WriteLine();
+			int n = string.Compare(s1, s2);
+			Console.WriteLine("Compare" + n);
+			Console.WriteLine();
+			bool b1 = s1.Equals(s2);
+			Console.WriteLine("Equals " + b1);
+			bool b2 = String.Equals(s1, s2);
+			Console.WriteLine("Equals to = " + b2);
+			Console.WriteLine();
+			bool b3 = (s1 == s2);
+			Console.WriteLine("==" + b3);
+			Console.WriteLine();
+			String x = "hello World";
+			Console.WriteLine("Original String " + x);
+			int i = x.IndexOf("d");
+			Console.WriteLine("Index of " + i);
+			i = x.LastIndexOf('l');
+			Console.WriteLine("Last Index of " + i);
+			Console.WriteLine();
+			x = "bye bye";
+			Console.WriteLine("Original " + x);
+			s1 = x.Replace('e', '4');
+			Console.WriteLine("replace = " + s1);
+			Console.WriteLine();
+			x = "hwllo welcome";
+			Console.WriteLine("original string " + x);
+			s1 = x.Remove(2);
+			s2 = x.Remove(2, 4);
+			Console.WriteLine("Remove with single " + s1);
+			Console.WriteLine("Remove with 2 parameters" + s2);
+			Console.WriteLine();
+			x = "new york";
+			Console.WriteLine("Original string" + x);
+			s1 = x.Substring(5);
+			Console.WriteLine("Substring s1" + s1);
+			s2 = x.Substring(1, 5);
+			Console.WriteLine("Substring s2" + s2);
+			Console.WriteLine();
+			s1 = "aligned";
+			Console.WriteLine("Original string" + s1);
+			s2 = s1.PadLeft(10, '*');
+			Console.WriteLine("Padleft " + s2);
+			s3 = s1.PadRight(12, '#');
+			Console.WriteLine("Padright " + s3);
+			Console.WriteLine();
+			x = "changed";
+			char[] dest = { 't', 'h', 'e', 'i', 'n', 'i', 'i', 'a', 'l', 'a', 'r', 'r', 'a', 'y' };
+			Console.WriteLine(dest);
+			x.CopyTo(0, dest, 4, x.Length);
+			Console.WriteLine(dest);
+			Console.WriteLine();
+			Console.ReadKey();
+		}
+	}
+}
