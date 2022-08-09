@@ -1,0 +1,46 @@
+using System;
+
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        public float Area(float x)
+        {
+            return (x * x);
+        }
+        public int Area(int l, int h)
+        {
+            return (l * h);
+        }
+        public double Area(double r)
+        {
+            return (3.14 * r * r);
+        }
+        public float Area(float len, float hyt)
+        {
+            return (0.5f * len * hyt);
+        }
+
+
+        static void Main(string[] args)
+        {
+
+            Program p = new Program();
+            Console.WriteLine("Area of Square= " + p.Area(5));
+            Console.WriteLine("Area of Rectangle= " + p.Area(10, 20));
+            Console.WriteLine("Area of Circle= " + p.Area(18.63));
+            Console.WriteLine("Area of Triangle= " + p.Area(9.236f, 3.3f));
+            Console.ReadKey();
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
