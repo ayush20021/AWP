@@ -1,0 +1,48 @@
+using System;
+
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        public static void solve(int a, int b, int c)
+        {
+            double sr = b * b - 4 * a * c;
+            double x1, x2, img, x;
+            if (sr > 0)
+            {
+                x1 = (-b + Math.Sqrt(sr) / (2 * a));
+                x2 = (-b + Math.Sqrt(sr) / (2 * a));
+                Console.WriteLine("Two Real solution " + x1 + " " + x2);
+
+
+            }
+            else if (sr < 0)
+            {
+                sr = -sr;
+                x = -b / (2 * a);
+                img = Math.Sqrt(sr) / (2 * a);
+                Console.WriteLine("two imaginary solution " + x + " " + img + "or" + x + "-" + img);
+
+
+            }
+            else
+            {
+                x = (-b + Math.Sqrt(sr)) / (2 * a);
+                Console.WriteLine("One real solution" + x);
+
+            }
+        }
+        static void Main(string[] args)
+        {
+
+            solve(10, 20, 21);
+            Console.ReadKey();
+
+
+
+
+
+        }
+    }
+}
