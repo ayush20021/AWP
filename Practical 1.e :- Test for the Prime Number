@@ -1,0 +1,38 @@
+using System;
+
+
+namespace Product
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int i, no, j;
+            bool flag = true;
+            Console.WriteLine("Enter Any no ");
+            no = int.Parse(Console.ReadLine());
+            for (i = 2; i < no; i++)
+            {
+                for (j = 2; j <= no; j++)
+                {
+                    if (i != j && i % j == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag == true)
+                {
+                    Console.WriteLine("\n The Prime Number are:" + i);
+                }
+                flag = true;
+            }
+
+
+
+
+        }
+        
+    }
+    }
