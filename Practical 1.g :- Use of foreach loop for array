@@ -1,0 +1,22 @@
+using System;
+
+
+namespace Product
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            String[] item = { "Ayush", "Paras", "Shyam", "Mansi", "Aryan", "Parth" };
+            foreach (string i in item)
+            {
+                Console.WriteLine("\n" + i);
+            }
+            Console.ReadKey();
+
+
+        }
+    }
+}
