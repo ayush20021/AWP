@@ -1,0 +1,83 @@
+using System;
+
+
+namespace ConsoleApplication1
+{
+  
+    }
+    class opreaton
+    {
+
+
+        class Program
+        {
+
+
+
+
+            static void Main(string[] args)
+            {
+
+            int a = 10, b = 5, c = 5;
+            int x, y;
+            try
+            {
+                x = a / (b - c);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Divide by zero");
+            }
+            y = a / (b + c);
+            int[] d = { 5, 10 };
+            int f = 5;
+            try
+            {
+                int g = d[2] / f - d[1];
+            }
+            catch (ArithmeticException e)
+            {
+                Console.WriteLine("Divide by zero");
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine("Array index error");
+            }
+            try
+            {
+                Division();
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("Caught Exception inside main");
+            }
+            finally
+            {
+                Console.WriteLine("Inside Main");
+            }
+            Console.ReadKey();
+        }
+        static int m = 10;
+        static int n = 0;
+        static void Division()
+        {
+            try
+            {
+                int k = m / n;
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("Caught exception inside main");
+            }
+            finally
+            {
+                Console.WriteLine("Inside Main");
+            }
+
+
+
+
+
+        }
+    }
+    }
