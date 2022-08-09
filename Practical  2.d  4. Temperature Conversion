@@ -1,0 +1,29 @@
+Conversion
+using System;
+
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter temperature in fahrenheit");
+            double f, c;
+            f = Convert.ToDouble(Console.ReadLine());
+            c = (f - 32) * 5 / 9;
+            Console.WriteLine("After Conversion temperature in celsius={0}", c);
+            Console.ReadKey();
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
