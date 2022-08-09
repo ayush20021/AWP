@@ -1,0 +1,71 @@
+using System;
+
+
+namespace ConsoleApplication1
+{
+  
+    class Program
+    {
+        int x, y;
+        public Program()
+        {
+            Console.WriteLine("Default constructer ");
+            x = y = 0;
+        }
+        public Program(int a)
+        {
+            Console.WriteLine("parameter constructer");
+            x = y = a;
+        }
+        public Program(int a, int b)
+        {
+            Console.WriteLine("Parametered constructer ");
+            x = a;
+            y = b;
+
+        }
+        public Program(Program c)
+        {
+            Console.WriteLine("copy Constructer ");
+            x = c.x;
+            y = c.y;
+        }
+
+        static Program()
+        {
+            Console.WriteLine("Static Constructer");
+
+        }
+        public void display()
+        {
+            Console.WriteLine(" x = " + x);
+            Console.WriteLine("y = " + y);
+
+        }
+
+
+        static void Main(string[] args)
+        {
+
+            Program p = new Program();
+            Program p1 = new Program(10);
+            Program p2 = new Program(10, 20);
+            Program p3 = new Program(p1);
+
+            p.display();
+            p1.display();
+            p2.display();
+            p3.display();
+            Console.ReadKey();
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
