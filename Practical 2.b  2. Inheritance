@@ -1,0 +1,89 @@
+using System;
+
+
+namespace ConsoleApplication1
+{
+    class A
+    {
+        public int a;
+        public A(int x)
+        {
+            Console.WriteLine("Clas A");
+            a = x;
+
+        }
+        public void showA()
+        {
+            Console.WriteLine("a = " + a);
+        }
+    }
+
+    class B : A
+    {
+        int b;
+
+        public B(int x, int y) : base(x)
+        {
+            Console.WriteLine("Call B");
+            b = y;
+        }
+        public void showB()
+        {
+            Console.WriteLine("b = " + b);
+
+        }
+    }
+    class C : A
+    {
+        int c;
+        public C(int x, int y) : base(x)
+        {
+            Console.WriteLine("Call C");
+            c = y;
+        }
+        public void showC()
+        {
+            Console.WriteLine("C = " + c);
+        }
+    }
+    class D : B
+    {
+        int d;
+
+        public D(int x, int y, int z) : base(x, y)
+        {
+            Console.WriteLine("call D");
+            d = z;
+        }
+        public void showD()
+        {
+            Console.WriteLine("d = " + d);
+        }
+    }
+    class Program
+    {
+       
+
+
+        static void Main(string[] args)
+        {
+
+            C o = new C(10, 20);
+            D p = new D(30, 40, 50);
+            o.showA();
+            o.showC();
+            p.showB();
+            p.showD();
+            Console.ReadKey();
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
