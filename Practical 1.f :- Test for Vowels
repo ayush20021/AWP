@@ -1,0 +1,45 @@
+using System;
+
+
+namespace Product
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            String s = "Hi Ayush  have a great day !!";
+            Char[] letter = s.ToCharArray();
+            foreach (char c in letter)
+            {
+                String s1 = Vowel(c);
+                Console.WriteLine("{0} is {1}", c, s1);
+            }
+            Console.ReadKey();
+        }
+        public static String Vowel(char a)
+        {
+            switch (a)
+            {
+                case 'a':
+                case 'A':
+                case 'e':
+                case 'E':
+                case 'i':
+                case 'I':
+                case 'o':
+                case 'O':
+                case 'u':
+                case 'U':
+                    return ("Vowel");
+                default:
+                    return ("Not a Vowel");
+
+
+
+
+            }
+
+        }
+    }
+}
