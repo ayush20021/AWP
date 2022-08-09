@@ -1,0 +1,50 @@
+using System;
+
+
+namespace ConsoleApplication1
+{
+    interface Addition
+    { int Add(); }
+    interface subtraction
+    { int sub(); }
+    class A : Addition, subtraction
+    {
+        public int x, y;
+        public A(int a, int b)
+        {
+            x = a; y = b;
+            Console.WriteLine("1st number=" + x);
+            Console.WriteLine("2nd number=" + y);
+        }
+
+        public int Add()
+        { return x + y; }
+        public int sub()
+        { return x - y; }
+    }
+    class opreaton
+    {
+
+
+        class Program
+        {
+
+
+
+
+            static void Main(string[] args)
+            {
+
+                A O = new A(10, 20);
+                Addition obj1 = (Addition)O;
+                subtraction obj2 = (subtraction)O;
+                Console.WriteLine("Addition=" + obj1.Add());
+                Console.WriteLine("Subraction" + obj2.sub());
+                Console.ReadKey();
+
+
+
+            }
+        }
+    }
+}
