@@ -1,0 +1,42 @@
+using System;
+
+
+namespace ConsoleApplication1
+{
+    public delegate void EventHandler(String a);
+    class opreaton
+    {
+        public event EventHandler xyz;
+
+        public void Action(string a)
+        {
+            if (xyz != null)
+            {
+                xyz(a);
+                Console.WriteLine(a);
+
+            }
+            else
+            {
+
+                Console.WriteLine("Not Registered");
+            }
+        }
+    }
+
+    class Program
+    {
+        public static void CatchEvent(String s)
+        {
+
+            Console.WriteLine("Methord Calling");
+
+
+        }
+
+static void Main(string[] args)
+        { opreaton o = new opreaton();
+            o.Action("Event Calling");
+            o.xyz += new EventHandler(CatchEvent);
+            //o.Action("Event Calling")
+            Console.ReadKey();}}}
